@@ -95,4 +95,5 @@ header img {
   flex-shrink: 0;
   /* flex-grow: 0; */
   min-height: 300px;
+  border-radius: 10px;
 }

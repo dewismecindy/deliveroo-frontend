@@ -31,7 +31,7 @@ const Menu = ({ data, bucket }) => {
               <div>
                 <p>+</p>
                 <p>-</p>
-                <p>Peut-être</p>
+                <p>Peux-être</p>
               </div>
             );
           })}

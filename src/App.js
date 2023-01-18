@@ -17,7 +17,9 @@ function App() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await axios.get("http://localhost:3001/");
+      const response = await axios.get(
+        "https://cindewi-deliveroo-backend.herokuapp.com/"
+      );
       setData(response.data);
       setIsLoading(false);
     };
