@@ -1,6 +1,7 @@
 import Meal from "./Meal";
+import Bucket from "./Bucket";
 
-const Menu = ({ data, bucket }) => {
+const Menu = ({ data, bucket, setBucket, cart, setCart }) => {
   return (
     <div className="menu">
       <div className="container">
@@ -15,7 +16,15 @@ const Menu = ({ data, bucket }) => {
                     <div className="category-meals">
                       {category.meals.map((meal) => {
                         console.log("meal => ", meal);
-                        return <Meal mealData={meal} />;
+                        return (
+                          <Meal
+                            mealData={meal}
+                            bucket={bucket}
+                            setBucket={setBucket}
+                            cart={cart}
+                            setCart={setCart}
+                          />
+                        );
                       })}
                     </div>
                   </>
@@ -24,18 +33,12 @@ const Menu = ({ data, bucket }) => {
             );
           })}
         </div>
-        <div className="bucket">
-          {bucket.map((element, index) => {
-            console.log("bucket element >", element);
-            return (
-              <div>
-                <p>+</p>
-                <p>-</p>
-                <p>Peut-être</p>
-              </div>
-            );
-          })}
-        </div>
+        <Bucket
+          bucket={bucket}
+          setBucket={setBucket}
+          cart={cart}
+          setCart={setCart}
+        />
       </div>
     </div>
   );

@@ -34,7 +34,13 @@ function App() {
         ) : (
           <>
             <Hero data={data} />
-            <Menu data={data} bucket={bucket} />
+            <Menu
+              data={data}
+              bucket={bucket}
+              setBucket={setBucket}
+              cart={cart}
+              setCart={setCart}
+            />
           </>
         )}
       </main>
