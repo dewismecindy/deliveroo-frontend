@@ -8,12 +8,10 @@ import Menu from "./components/Menu";
 function App() {
   const [data, setData] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
-  const [bucket, setBucket] = useState([
-    "bonjour",
-    "hello",
-    "buenas dias",
-    "guttentag",
-  ]);
+
+  /* initialisation des states "bucket" (pour stocket la réponse du back-end) et "cart" (pour stocker le contenu du panier) */
+  const [bucket, setBucket] = useState([]);
+  const [cart, setCart] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
